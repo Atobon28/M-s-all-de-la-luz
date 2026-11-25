@@ -125,3 +125,13 @@ body[data-page=historia] #historia{max-width:1440px;margin:0 auto;padding:clamp(
 .forum-composer{background:#f8f7fb;border-color:#e1dced}.forum-composer label{color:#56566c}.forum-empty{background:#f8f8fb;color:#686b7d}.forum-demo-note{color:#77798a}
 @media(max-width:900px){.book-layout{grid-template-columns:1fr}.book-buy-card{display:grid;grid-template-columns:minmax(110px,.38fr) minmax(0,1fr);align-items:center;gap:24px}.book-buy-card .book-cover-placeholder{max-width:180px}.book-buy-card h3{margin-top:6px}.book-intro{min-height:270px}}
 @media(max-width:680px){body nav,body[data-page=tienda] nav{min-height:60px;padding:8px 10px}body nav .navlinks{gap:2px}body nav .navlinks a,body:not([data-page=historia]) nav .navlinks a{padding:10px clamp(7px,2vw,15px);font-size:12px}.film-heading{flex-direction:column;align-items:start;gap:7px;margin-bottom:14px}.film-heading p{text-align:left;font-size:11px}.screen{border-radius:9px}.screen video{max-height:none}.player-footer .status{flex-basis:100%;margin:0}.player-footer button{flex:1;min-height:44px}.studio-section-head{margin-bottom:22px}.studio-section-head h2{font-size:clamp(37px,9vw,62px);margin:10px 0 12px}.book-intro{padding:26px 22px;min-height:250px}.book-buy-card{grid-template-columns:105px minmax(0,1fr);gap:18px;padding:14px}.book-cover-type{padding:5px}.book-cover-type strong{font-size:20px}.book-cover-type small{font-size:6px}.book-cover-type span{font-size:20px}.book-page p{font-size:15px}.forum-thread{padding:14px}.forum-top{gap:10px}}
+
+/* Final artwork integration; preserve approved page structure. */
+.book-cover-photo{width:100%;max-width:245px;align-self:center;border-radius:9px;overflow:hidden;background:#f3f1f8;box-shadow:0 8px 22px #2b25451c}
+.book-cover-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:contain}
+.book-page-art{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;margin-top:16px;max-height:165px}
+.book-page:has(.book-page-art:not([hidden])){justify-content:flex-start}
+.book-page-art[hidden]{display:none!important}
+.book-turn-sheet .book-page-art{max-height:120px}
+@media(max-width:900px){.book-buy-card .book-cover-photo{max-width:180px}}
+@media(max-width:680px){.book-page-art{max-height:150px}.book-buy-card .book-cover-photo{max-width:100%}}
